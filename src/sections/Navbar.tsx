@@ -23,10 +23,10 @@ export default function Navbar() {
       name: "My List",
       route: "/list",
     },
-    {
-      name: "About",
-      route: "/about",
-    },
+    // {
+    //   name: "About",
+    //   route: "/about",
+    // },
   ];
   const location = useLocation();
   const dispatch = useAppDispatch();
@@ -58,7 +58,7 @@ export default function Navbar() {
               <Link
                 to={route}
                 key={index}
-                onClick={(e) => dispatch(resetRandomPokemons())}
+                onClick={e => dispatch(resetRandomPokemons())}
               >
                 <li>{name}</li>
               </Link>
